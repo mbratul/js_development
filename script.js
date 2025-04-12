@@ -13,4 +13,8 @@ console.log(space_remove.trim());
 console.log(space_remove.split(" "));
 console.log(space_remove.trim());
 
+console.log("hello developers");
+
+
+
 
