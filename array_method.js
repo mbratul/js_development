@@ -71,3 +71,4 @@ console.log(multi_array[2][3].length); // display inside array length
 console.log(multi_array[2]); // display inside array length
 
 
+
