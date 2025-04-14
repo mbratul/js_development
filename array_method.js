@@ -55,3 +55,19 @@ console.log(person_list);
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 person_list.unshift('rony');
 console.log(person_list);
+
+/* ============ Multi Dimensional Array =========== */
+
+let multi_array = [
+    ['ratul', 'dhaka', 40],
+    ['rana', 'bagerhat', 45],
+    ['prince', 'singapore', 41,['running', 'cyceling']]
+];
+
+console.log(multi_array); //display multidimensional array
+console.log(multi_array.length); // display array length
+console.log(multi_array[0].length); // display specific array length
+console.log(multi_array[2][3].length); // display inside array length
+console.log(multi_array[2]); // display inside array length
+
+
