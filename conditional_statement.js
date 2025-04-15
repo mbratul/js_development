@@ -1,3 +1,9 @@
+/*
+    conditional statement describe here
+    follow this url for details description
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#conditional_statements
+    https://www.w3schools.com/js/js_if_else.asp
+ */
 // let i = 0;
 // for(i = 0; i < 10; i++){
 //     console.log(i);    
