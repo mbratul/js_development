@@ -11,24 +11,23 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators
     6. typeof Operator ==     
  */
 
-    /* ===== Arithmetic Operator==== */
-    let a = 10;
-    let b = 2;
-    
-    console.log(a + b); // display addition
-    console.log(a - b); // display subtraction
-    console.log(a * b); // display multiplication
-    console.log(a / b); // display division
-    console.log(a ** b); // display exponentiation just like power in math. 10 square 
-    console.log(a % b); // display division
+/* ===== Arithmetic Operator==== */
+let a = 10;
+let b = 2;
 
-    // a **= b;
-    // a *= b;
-    // a += b;
-     a -= b;
-    //a /= b;
-    //a != b;
-    console.log(a);
-    
+console.log(a + b); // display addition
+console.log(a - b); // display subtraction
+console.log(a * b); // display multiplication
+console.log(a / b); // display division
+console.log(a ** b); // display exponentiation just like power in math. 10 square
+console.log(a % b); // display division
 
-    
+// a **= b;
+// a *= b;
+// a += b;
+a -= b;
+//a /= b;
+//a != b;
+//a >= b; greater than or equal to
+//a <= b; less than or equal to
+console.log(a);
