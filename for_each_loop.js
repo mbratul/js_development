@@ -14,18 +14,18 @@ console.log(arr[2]);
 // }
 /* === for each loop ==== */
 
-arr.forEach(function (el) {
-  console.log(el);
+arr.forEach(function (element) {
+  console.log(element);
 });
 
-arr.forEach((el) => {
-  console.log(el);
+arr.forEach((element) => {
+  console.log(element);
 });
 
 let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-num.forEach(function (el) {
-  if (el % 2 == 0) {
+num.forEach(function (element) {
+  if (element % 2 == 0) {
     console.log("Even");
   } else {
     console.log("Odd");
