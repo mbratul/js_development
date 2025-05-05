@@ -68,3 +68,9 @@ let area_of_circle = (radius) => {
   return area;
 };
 console.log(area_of_circle(4));
+
+/* Set a default parameter */
+function default_name(name = ratul) {
+  console.log("Hello " + name);
+}
+default_name("billah");
