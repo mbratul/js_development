@@ -74,3 +74,23 @@ function default_name(name = ratul) {
   console.log("Hello " + name);
 }
 default_name("billah");
+
+/* Arrow Function */
+
+let sayArrow = () => {
+  console.log("hello arrow function");
+};
+
+sayArrow();
+/* Arrow function with single line statement */
+let sayArrowSingle = (a, b) => a + b;
+
+console.log(sayArrowSingle(4, 5));
+/* interview question 64  */
+if (0) {
+  function getData() {
+    console.log("data");
+  }
+}
+console.log(getData);
+/* result is == undefined */
