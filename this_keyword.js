@@ -83,3 +83,9 @@ greet2();
 person5.sayHello();
 greet2.call(another_person6);
 //Driver Code Ends }
+
+/* 
+  Using this alone(Global Context)
+  When used alone in JavaScript, outside of any specific context, the behavior of the this keyword depends on whether the code is running in strict mode or not.
+ */
+console.log(this);
