@@ -72,7 +72,7 @@ function greet2() {
 }
 let person5 = {
   name: "Amit",
-  sayHello: greet2,
+  sayHello: greet2, // This assigns the function itself (greet2) to the sayHello property.
 };
 
 let another_person6 = {
