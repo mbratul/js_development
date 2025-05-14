@@ -45,3 +45,41 @@ console.log(person3.greet());
     method >> Reference the current Object 
     function >> Reference the global or window object
  */
+/* 
+  Using this in a Method
+
+  In the context of an object method in JavaScript, the this keyword refers to the object itself, allowing access to its properties and methods within the method’s scope. It facilitates interaction with the object’s data and behaviour, providing a way to access and manipulate its state.
+ */
+
+const person4 = {
+  name: "John",
+  age: 30,
+  greet() {
+    console.log(
+      "hello, my name is " + this.name + " and i am " + this.age + " years old."
+    );
+  },
+};
+person4.greet();
+
+/* 
+  Using this in a Function
+  In a JavaScript function, the behavior of the this keyword varies depending on how the function is invoked.
+ */
+
+function greet2() {
+  console.log("hello my name is " + this.name);
+}
+let person5 = {
+  name: "Amit",
+  sayHello: greet2,
+};
+
+let another_person6 = {
+  name: "jatin",
+};
+//Driver Code Starts {
+greet2();
+person5.sayHello();
+greet2.call(another_person6);
+//Driver Code Ends }
