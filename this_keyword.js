@@ -1,4 +1,9 @@
-/* this keyword example is written here */
+/*  this keyword example is written here 
+
+    Definition: The ‘this keyword’ in JavaScript refers to the object to which it belongs. Its value is determined by how a function is called, making it a dynamic reference. The ‘this’ keyword is a powerful and fundamental concept used to access properties and methods of an object, allowing for more flexible and reusable code.
+
+    https://www.geeksforgeeks.org/javascript-this-keyword/
+*/
 
 /* this keyword use in regular function */
 let person = {
@@ -25,6 +30,15 @@ let person2 = {
   },
 };
 person2.showName();
+
+const person3 = {
+  name: "GeeksforGeeks",
+  greet() {
+    return ` welcome to, ${this.name}`;
+  },
+};
+console.log(person3.greet());
+
 /* 
     where to use this keyword
 
