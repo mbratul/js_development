@@ -57,6 +57,7 @@ robot1.talk();
 
 let Person = function (name, age) {
   // creating person object
+
   let person4 = {};
 
   // parameters as keys to this object
