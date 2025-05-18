@@ -1,5 +1,5 @@
 /* 
-    defination : In JavaScript, a factory function is a function that returns an object. It is a way of creating and returning objects in a more controlled and customizable manner. Factory functions are a form of design pattern that enables the creation of objects with specific properties and behaviors.
+    definition : In JavaScript, a factory function is a function that returns an object. It is a way of creating and returning objects in a more controlled and customizable manner. Factory functions are a form of design pattern that enables the creation of objects with specific properties and behaviors.
     
     https://www.geeksforgeeks.org/what-are-factory-functions-in-javascript/ 
  */
@@ -12,7 +12,7 @@ let person1 = {
   },
 };
 person1.sayHello();
-
+/* Factory Function Creation */
 function createPerson(name, age) {
   return {
     name: name,
