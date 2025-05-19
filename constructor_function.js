@@ -5,4 +5,6 @@
     One notable characteristic of functions created with the Function() constructor is that they have a global scope, meaning they are accessible from anywhere in the code.
     
     url: https://www.geeksforgeeks.org/javascript-function-constructor/
+
+    start here
  */
