@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Selection Part 2</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <p class="para">
+      In ex aliqua sint velit eu. Nostrud et cillum mollit magna veniam occaecat
+      aliqua nisi sint velit do ea cillum enim. Tempor aliquip est dolor enim
+      Lorem cillum deserunt magna excepteur.
+    </p>
+    <p class="para">
+      Veniam voluptate esse do culpa ipsum dolor et ullamco cillum reprehenderit
+      in sint esse consectetur. Aliquip cillum est do do dolore consectetur
+      nulla labore est consequat consectetur.
+    </p>
+
+    <script>
+      /* use of getelementsbyclassname 
+      url : https://www.geeksforgeeks.org/html-dom-queryselectorall-method/
+      */
+      //let para = document.getElementsByClassName("para");
+      //console.log(para);
+      //para[0].style.color = "red";
+
+      /*  for (let i = 0; i < para.length; i++) {
+        para[i].style.color = "red";
+      } */
+
+      /* use of queryselectorall */
+      let para = document.querySelectorAll(".para"); // write exact css ID or class name include . or #
+      //console.log(para[0]);
+      /* we can use foreach loop for queryselectorall element */
+      para.forEach(function (el) {
+        el.style.color = "red";
+      });
+
+      para.forEach((el) => {
+        el.style.backgroundColor = "red";
+        el.style.color = "#ffffff";
+      });
+    </script>
+
+    <ul>
+      <li>one</li>
+      <li>two</li>
+      <li>three</li>
+      <li>four</li>
+      <li>five</li>
+    </ul>
+
+    <script>
+      listItems = document.querySelectorAll("li");
+      //listItems = document.querySelectorAll("li:nth-of-type(3)"); use of psedu element of css
+      console.log(listItems);
+
+      ulList = document.querySelector("ul");
+      console.log(ulList);
+      ulList.style.backgroundColor = "green";
+
+      listItems.forEach((el) => {
+        el.style.listStyle = "none";
+        //el.style.backgroundColor = "red";
+        el.style.color = "#ffffff";
+      });
+    </script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
