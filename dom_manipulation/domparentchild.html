@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Parent Child Selection</title>
+  </head>
+  <body>
+    <div>
+      <h1>hello world</h1>
+      <p>hello jupiter</p>
+    </div>
+
+    <script>
+      /* parent child selection display here */
+      let parent_selector = document.querySelector("div");
+      console.log(parent_selector);
+      let child_selector = parent_selector.children;
+      console.log(child_selector);
+      //child_selector[1].style.color = "red";
+      for (let i = 0; i < child_selector.length; i++) {
+        child_selector[i].style.color = "red";
+      }
+      let title_head = document.querySelector("h1");
+      console.log(title_head.parentElement);
+      title_head.parentElement.style.backgroundColor = "green";
+    </script>
+    <!-- sibling selection in a li list -->
+    <div>
+      <ul>
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer"></a>item one
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer"></a>item two
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer"></a>item three
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer"></a>item four
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      let siblingsItem = document.querySelector("li");
+      console.log(siblingsItem);
+      console.log(siblingsItem.parentElement);
+
+      //let red_text = (siblingsItem.style.color = "red");
+      let red_text = (siblingsItem.nextElementSibling.style.color = "red");
+      console.log(red_text);
+
+      let bgColor = (siblingsItem.parentElement.style.backgroundColor = "grey");
+      console.log(bgColor);
+    </script>
+  </body>
+</html>
