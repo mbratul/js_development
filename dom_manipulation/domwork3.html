@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM Manipulation</title>
 
+    <style>
+      /* span {
+        display: none;
+      } */
+    </style>
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <h2><span>hello</span> world</h2>
+
+    <script>
+      let title2 = document.querySelector("h2");
+      //title2.textContent = "hello jupiter";
+      //title2.innerText = "hello jupiter";
+      title2.innerHTML = '<span style="color:red">hello</span> world ';
+      //title2.innerText = '<span style="color:red">hello</span> world';
+    </script>
     <script src="./js/script.js"></script>
   </body>
 </html>
