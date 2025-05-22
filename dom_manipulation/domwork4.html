@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Event Listener</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <button>click me</button><br />
+
+    <script>
+      let title = document.querySelector("h1");
+      let button = document.querySelector("button");
+      /* click the button to change the text and background color of h1 tag */
+      button.addEventListener("click", function () {
+        title.style.color = "#ff00ff";
+        title.style.backgroundColor = "#ffff44";
+        title.style.padding = "15px";
+      });
+    </script>
+  </body>
+</html>
