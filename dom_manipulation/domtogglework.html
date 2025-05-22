@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Toggle Work</title>
+    <style>
+      .red {
+        background-color: red;
+        color: #ffffff;
+        width: 50%;
+        margin: 0 auto;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>hello world</h1>
+    <button id="btn_click">click me</button>
+    <button id="btn_toggle">toggle button</button>
+
+    <script>
+      let title = document.querySelector("h1");
+      let btn_click = document.getElementById("btn_click");
+      let btn_toggle = document.getElementById("btn_toggle");
+
+      btn_click.addEventListener("click", function () {
+        title.classList.add("red");
+      });
+
+      btn_toggle.addEventListener("click", function () {
+        title.classList.toggle("red");
+      });
+    </script>
+  </body>
+</html>
