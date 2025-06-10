@@ -6,6 +6,8 @@
     
     url: https://www.geeksforgeeks.org/javascript-function-constructor/
 
+    url: https://www.w3schools.com/js/js_object_constructors.asp
+
     start here very soon
 
     youtube: https://www.youtube.com/watch?v=ZGzzMuEMVr0
