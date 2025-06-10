@@ -6,5 +6,21 @@
     
     url: https://www.geeksforgeeks.org/javascript-function-constructor/
 
-    start here
+    start here very soon
+
+    youtube: https://www.youtube.com/watch?v=ZGzzMuEMVr0
+
+    Math object is not a constructor function
  */
+// it's a convention to use capital letter for create constructor function
+function Person(firstName, lastName, age) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+  this.fullName = function () {
+    return this.firstName + " " + this.lastName;
+  };
+}
+
+let ratul = new Person("muhtasim", "ratul", 40);
+console.log(ratul);
