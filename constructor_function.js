@@ -26,3 +26,6 @@ function Person(firstName, lastName, age) {
 
 let ratul = new Person("muhtasim", "ratul", 40);
 console.log(ratul);
+
+ratul.country = "Bangladesh";
+console.log(ratul);
