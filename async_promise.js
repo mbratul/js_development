@@ -40,3 +40,11 @@ promise
     console.log(err.message);
   });
 console.log(`lets see what happened to me`);
+
+let weather = fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then((response) => response.json())
+  .then((data) => console.log(data));
+console.log(weather);
+// fetch("https://jsonplaceholder.typicode.com/todos/1")
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
