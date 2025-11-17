@@ -27,12 +27,14 @@ const addToCalender = (meetingDetails) => {
   //   return new Promise((resolve) => {
   //     resolve(calender);
   //   });
-  return Promise.resolve(calender);
+  return Promise.resolve(calender); //shorter format of promise resolve method
 };
 
+// promise chaining
 promise
-  .then((meetingDetails) => {
-    console.log(JSON.stringify(meetingDetails));
+  .then(addToCalender)
+  .then((calender) => {
+    console.log(calender);
   })
   .catch((err) => {
     console.log(err.message);
