@@ -17,10 +17,10 @@ const meetingPromise = new Promise((resolve, reject) => {
 
 const addToCalender = (meetingDetails) => {
   const calender = `${meetingDetails.title} has been scheduled on ${meetingDetails.location} at ${meetingDetails.time}`;
-    return new Promise((resolve) => {
+    /* return new Promise((resolve) => {
       resolve(calender);
-    });
-  // return Promise.resolve(calender); //shorter format of promise resolve method
+    }); */
+   return Promise.resolve(calender); //shorter format of promise resolve method
 };
 
 // promise chaining
