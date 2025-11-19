@@ -1,13 +1,24 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
+  "books": [
+    { "title": "Refactoring - XYZ", "author": "Martin Fowler - Y", "id": "1" },
+    {
+      "title": "The Pragmatic Programmer",
+      "author": "Dave Thomas",
+      "id": "2"
+    },
+    {
+      "title": "Think LIke a programmer",
+      "author": "V Antos",
+      "id": "3"
+    },
+    {
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "id": "4"
+    }
   ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "users": [
+    { "name": "ratul", "email": "santos@doe.com" },
+    { "name": "ratul", "email": "jandoe@doe,com" }
+  ]
 }
