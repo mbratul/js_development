@@ -1,0 +1,11 @@
+GET = HTTP VERB
+
+POST  = Resource Create
+
+PUT = resource modify
+
+PATCH = resource modify
+
+DELETE = 
+
+Postman / Insomnia / HTTPie
