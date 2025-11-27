@@ -1,0 +1,4 @@
+class CurrencyConvert {
+  USDtoBDT() {}
+  BDTtoUSD() {}
+}
