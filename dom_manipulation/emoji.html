@@ -10,7 +10,7 @@
       }
       .emoji {
         position: absolute;
-        font-size: 24px;
+        font-size: 40px;
         animation: fall 2s linear infinite;
       }
       @keyframes fall {
@@ -27,7 +27,7 @@
   <script>
     setInterval(() => {
       const div = document.createElement("div");
-      div.innerText = "ruby";
+      div.innerText = "-|-";
       div.style.left = `${Math.random() * 100}%`;
       div.style.color = "red";
       div.classList.add("emoji");
