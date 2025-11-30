@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Country List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Country Details</h1>
+      <select name="country" id="country">
+        <option value="">Select Country</option>
+      </select>
+      <div class="showDetails hide" id="showDetails">
+        <div class="row">
+          <ul>
+            <li>Country Name:</li>
+            <li id="country_name"></li>
+          </ul>
+        </div>
+        <div class="row">
+          <ul>
+            <li>Capital</li>
+
+            <li id="country_capital"></li>
+          </ul>
+        </div>
+        <div class="row">
+          <ul>
+            <li>Population</li>
+            <li id="country_population"></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
