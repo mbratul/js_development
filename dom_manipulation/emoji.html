@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>emoji</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+      .emoji {
+        position: absolute;
+        font-size: 24px;
+        animation: fall 2s linear infinite;
+      }
+      @keyframes fall {
+        0% {
+          top: -50px;
+        }
+        100% {
+          top: 100vh;
+        }
+      }
+    </style>
+  </head>
+  <body></body>
+  <script>
+    setInterval(() => {
+      const div = document.createElement("div");
+      div.innerText = "ruby";
+      div.style.left = `${Math.random() * 100}%`;
+      div.style.color = "red";
+      div.classList.add("emoji");
+      document.body.appendChild(div);
+      setTimeout(() => {
+        div.remove();
+      }, 2000);
+    }, 500);
+  </script>
+</html>
