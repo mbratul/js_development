@@ -27,10 +27,12 @@ select.addEventListener("change", function () {
   });
   //   console.log(country);
   if (country) {
-    showDetails.classList.toggle("hide");
+    showDetails.classList.remove("hide");
     countryName.innerText = country.name.common;
     countryCapital.innerText = country.capital;
     countryPopulation.innerText = country.population.toLocaleString();
+  } else {
+    showDetails.classList.add("hide");
   }
 });
 loadCountries();
