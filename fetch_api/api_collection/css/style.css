@@ -21,3 +21,6 @@
 .hide {
   display: none;
 }
+.data_list ul {
+  list-style: none;
+}

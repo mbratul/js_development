@@ -70,6 +70,43 @@
         />
       </div>
     </div>
+    <div class="container">
+      <div class="container mt-5 direction-column">
+        <h3 class="h3">Get Universities by Country</h3>
+        <input
+          type="text"
+          class="form-control w-50 mb-1"
+          name="country_name"
+          id="country_name"
+          placeholder="Enter your country name"
+        />
+        <button class="btn btn-primary" id="btn_country">
+          Get University List
+        </button>
+        <div class="data_list">
+          <h3 id="university_count" class="h5 mt-3"></h3>
+          <ul id="universityList" class="my-2 list-group">
+            <li></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <div class="col-md-12">
+          <h2 class="h5">Get Weather by Location</h2>
+          <input
+            type="text"
+            class="form-control w-50"
+            id="locationInp"
+            placeholder="Enter Your Location"
+          />
+          <button class="btn btn-success mt-3" id="btnWeather">
+            Get Weather
+          </button>
+
+          <div id="weatherData" class="mt-5"></div>
+        </div>
+      </div>
+    </div>
     <script defer src="./js/script.js"></script>
   </body>
 </html>

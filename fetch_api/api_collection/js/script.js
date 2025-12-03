@@ -48,15 +48,84 @@ async function personRandomImage() {
 
   personImage.src = url;
 }
-const qupteID = document.querySelector("#qupteID");
 
 async function qupteGenerateRandome() {
+  const qupteID = document.querySelector("#qupteID");
   const url = "https://api.kanye.rest/";
   const response = await fetch(url);
   const data = await response.json();
   qupteID.innerText = data.quote;
 }
 
+const btnCountry = document.querySelector("#btn_country");
+/**
+ * get university list by country wise
+ */
+async function fetchUniversityList() {
+  const countryName = document.querySelector("#country_name");
+  const country = countryName.value;
+  const url = `http://universities.hipolabs.com/search?name=university&country=${country}`;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`University not found ${response.status}`);
+    }
+    const data = await response.json();
+    document.querySelector(
+      "#university_count"
+    ).innerText = `Total University in ${country} are ${data.length}`;
+    document.querySelector("#universityList").innerHTML = data
+      .map((university) => {
+        return `<li class="list-group-item my-1">${university.name}</li>`;
+      })
+      .join("");
+    countryName.value = "";
+  } catch (error) {
+    document.getElementById("universityList").innerHTML = `
+        <div class="alert alert-danger">
+        <h2>Error fetching unioversity data</h2>
+        <p>Please try again later</p>
+        <p>${err.message}</p>
+    </div>
+        `;
+  }
+}
+
+const btnWeather = document.querySelector("#btnWeather");
+const locationInp = document.querySelector("#locationInp");
+/**
+ * get weather data of the location
+ */
+async function fetchWeather() {
+  console.log(locationInp.value);
+  const localtionValue = locationInp.value;
+  const url = `https://goweather.herokuapp.com/weather/${localtionValue}`;
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Failed to fetch Weather Data");
+    }
+    const data = await response.json();
+    console.log(data);
+    if (data.temperature) {
+      document.querySelector("#weatherData").innerHTML = `
+      <div class="alert alert-success">
+        <h2>Weather in ${localtionValue}</h2>
+        <p>Temperature <strong>${data.temperature}</strong></p>
+        <p>Description <strong>${data.description}</strong></p>
+      </div>
+      `;
+    }
+    locationInp.value = "";
+  } catch (error) {
+    document.querySelector("#weatherData").innerHTML = `
+      <div class="alert alert-success">
+        <div class="alert alert-danger">
+        <h2>No Weather data found in ${localtionValue}</h2>
+      </div>
+      `;
+  }
+}
 // setInterval(dogRandomImage, 5000);
 // setInterval(catRandomImage, 5000);
 // setInterval(personRandomImage, 5000);
@@ -70,3 +139,5 @@ window.onload = function () {
 btnDog.addEventListener("click", dogRandomImage);
 btnCat.addEventListener("click", catRandomImage);
 btnPerson.addEventListener("click", personRandomImage);
+btnCountry.addEventListener("click", fetchUniversityList);
+btnWeather.addEventListener("click", fetchWeather);
