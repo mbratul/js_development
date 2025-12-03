@@ -76,9 +76,11 @@ async function fetchUniversityList() {
     ).innerText = `Total University in ${country} are ${data.length}`;
     document.querySelector("#universityList").innerHTML = data
       .map((university) => {
-        return `<li class="list-group-item my-1">
+        const html = `<li class="list-group-item my-1">
               <a class="text-secondary" href="${university.web_pages[0]}" target="_blank" rel="noopener noreferrer">${university.name}</a>
             </li>`;
+
+        return html;
       })
       .join("");
     countryName.value = "";
