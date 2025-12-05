@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-gray-100 min-h-screen flex flex-col items-center p-6">
+    <h1 class="text-3xl font-bold mb-6">Todo List App</h1>
+    <!-- Filter Button -->
+    <div class="mb-4 spce-x-4">
+      <button
+        id="filterAll"
+        class="px-4 py-2 bg-blue-500 text-white rounded cursor-pointer"
+      >
+        All
+      </button>
+      <button
+        id="filterActive"
+        class="px-4 py-2 bg-gray-300 rounded cursor-pointer"
+      >
+        Active
+      </button>
+      <button
+        id="filterCompleted"
+        class="px-4 py-2 bg-gray-300 rounded cursor-pointer"
+      >
+        Completed
+      </button>
+    </div>
+    <!-- Filter Button -->
+    <!-- Add Todo Form -->
+    <form id="todo_form" class="mb-6 flex w-full max-w-md">
+      <input
+        type="text"
+        name=""
+        id="todo_input"
+        placeholder="Add New Todo"
+        required
+        class="grow p-2 border border-gray-400 rounded"
+      />
+      <button
+        type="submit"
+        id="btnSubmit"
+        class="bg-green-500 text-white px-4 rounded ml-2 cursor-pointer hover:bg-green-900"
+      >
+        Add Todo
+      </button>
+    </form>
+    <!-- Add Todo Form -->
+    <!-- Todo App List  -->
+    <ul id="todo_list" class="w-full max-w-md space-y-2"></ul>
+    <!-- Todo App List  -->
+    <script defer src="./js/script.js"></script>
+  </body>
+</html>
