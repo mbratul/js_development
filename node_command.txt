@@ -1,3 +1,0 @@
-node js auto refresh command in vs code terminal
-
-node --watch script.js (js file name == script.js)  
