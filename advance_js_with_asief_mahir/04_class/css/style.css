@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container form {
+  display: flex;
+}
+h1 {
+  display: block;
+}
+ul.todo_list {
+  list-style: none;
+}
+li.todo_item {
+  display: flex;
+  justify-content: space-around;
+}
+.todo_edit_btn,
+.todo_delete {
+  border: none;
+  background-color: yellow;
+  border-radius: 10%;
+  font-size: 12px;
+  padding: 5px;
+  justify-content: space-around;
+}
+.todo_delete {
+  background-color: red;
+}
+.bg_aqua {
+  background-color: aqua;
+}
+.bg_green {
+  background-color: green;
+}
