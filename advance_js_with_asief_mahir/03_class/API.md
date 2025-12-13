@@ -18,11 +18,17 @@ Statelessness: The server does not store any information about the client's stat
 
 # HTTP Methods: REST APIs primarily use standard HTTP verbs to perform actions on resources:
 
-GET: Retrieve data from a server.
-POST: Create a new resource on the server.
-PUT: Update or replace an existing resource.
-DELETE: Remove a resource.
+GET: Retrieve data from a server.  
+POST: Create a new resource on the server.  
+PUT: Update or replace an existing resource.  
+DELETE: Remove a resource.  
 PATCH: Partially update a resource.
+
+[URL](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods)
 
 Uniform Interface: All API requests for the same resource should look identical, regardless of the client (mobile app, browser, etc.).
 Common Data Formats: While REST can work with many formats, JSON (JavaScript Object Notation) is the most commonly used format for modern web services because it is lightweight and easy to parse
+
+# Event Bubbling
+
+[URL](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling)
