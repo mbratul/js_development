@@ -128,9 +128,112 @@
 }
 {
   /**
-   * set object lets you store unique value
+   * Set object lets you store unique value
    */
   const arr = [1, 5, 4, 15, 6, 4, 5, 6, 4, 5, 1, 4, 25, 6];
   const demoSet = new Set(arr);
   console.log(demoSet);
+}
+{
+  /**
+   * Map Object Data Type
+   * we can set any kind of data in map object as a key value pair
+   */
+  const map = new Map();
+  map.set(1, "11");
+  map.set("a", "ratul");
+  map.set([1, 2, 5, 4, 6], false);
+  console.log(map);
+}
+{
+  /**
+   * Object.value()
+   * give us an array of object values
+   * */
+  const obj1 = {
+    fullname: "ratul",
+    age: 40,
+  };
+  const arr = Object.values(obj1);
+  console.log(Object.values(obj1));
+  console.log(...arr);
+}
+{
+  /**
+   * Object.keys()
+   * give us an array of object keys
+   * */
+  const obj1 = {
+    fullname: "ratul",
+    age: 40,
+  };
+  const arr = Object.keys(obj1);
+  console.log(Object.keys(obj1));
+  console.log(...arr);
+}
+{
+  /**
+   * Object.entries()
+   * give us a nested array of objects
+   * */
+  const obj1 = {
+    fullname: "ratul",
+    age: 40,
+  };
+  const arr = Object.entries(obj1);
+  console.log(Object.entries(obj1));
+  console.log(...arr);
+}
+/**
+ * Important Array Methods
+ */
+{
+  /**forEach array method */
+  console.log("forEach Array");
+  const demoArr = [10, 20, 50, 45, 30, 40];
+  demoArr.forEach((ele, index) => {
+    console.log(ele, index);
+  });
+}
+{
+  /**map array method */
+  console.log("map Array");
+  const demoArr = [10, 20, 50, 45, 30, 40];
+  const resultArr = demoArr.map((ele, index) => {
+    return ele + 2;
+  });
+  console.log(resultArr);
+}
+{
+  /**filter array method */
+  console.log("filter Array");
+  const demoArr = [10, 20, 50, 45, 30, 40];
+  const filterArr = demoArr.filter((ele, index) => {
+    return ele % 2 === 0;
+  });
+  console.log(filterArr);
+  const todoArrObj = [
+    {
+      id: 1,
+      title: "something",
+      isCompleted: false,
+    },
+    {
+      id: 2,
+      title: "something2",
+      isCompleted: true,
+    },
+    {
+      id: 3,
+      title: "something3",
+      isCompleted: false,
+    },
+  ];
+  const filterTodo = todoArrObj.filter((el) => {
+    return el.isCompleted === true;
+  });
+  console.log(filterTodo);
+}
+{
+  /**find array method1 */
 }
