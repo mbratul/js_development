@@ -1,5 +1,7 @@
 # Class Plan for ThemeCamp
 
+[URL](https://whimsical-rate-df1.notion.site/Class-Plan-for-ThemeCamp-2f115c2287d4463598897e89f0fa2b94)
+
 - Understanding how Javascript works behind the scenes
   1. Javascript Engine and V8
   2. Execution Context
