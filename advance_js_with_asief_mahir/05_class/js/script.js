@@ -233,7 +233,146 @@
     return el.isCompleted === true;
   });
   console.log(filterTodo);
+
+  /**
+   * find array method. this method find the the first matched result in an array
+   * use object id to find out the matched result
+   * */
+
+  const findTodo = todoArrObj.find((element) => {
+    return element.isCompleted === false;
+  });
+  console.log(findTodo);
+
+  /**
+   * findindex array method to find out the index of an array element
+   */
+  const todoFindIndex = todoArrObj.findIndex((element) => {
+    return element.isCompleted === true;
+  });
+  console.log(todoFindIndex);
 }
 {
-  /**find array method1 */
+  /**
+   * includes array, return boolean result of an array element
+   */
+  const stringArr = ["abc", 123, "---", "def"];
+  console.log(stringArr.includes(123));
+}
+{
+  const todoArrObj = [
+    {
+      id: 1,
+      title: "something",
+      isCompleted: false,
+    },
+    {
+      id: 2,
+      title: "something2",
+      isCompleted: true,
+    },
+    {
+      id: 3,
+      title: "something3",
+      isCompleted: false,
+    },
+  ];
+  /**
+   * every array method return boolean if all elements are matched
+   */
+  const everyResult = todoArrObj.every((el) => {
+    return el.isCompleted === true;
+  });
+  console.log(everyResult);
+
+  /** some array method return boolean if a single element is matched */
+  const someResult = todoArrObj.some((el) => {
+    return el.isCompleted === true;
+  });
+  console.log(someResult);
+}
+{
+  /**
+   * flat array method merge all nested array in a single array
+   * we can define the depth of the array
+   */
+  const nested = [
+    1,
+    2,
+    [4, 7, 8, [8, 7, 8, [(7, 8, 9)]]],
+    4,
+    5,
+    [4, [6, 7, 9], 5],
+    7,
+    8,
+    [4, 3],
+  ];
+  const flatArray = nested.flat(Infinity);
+  console.log(flatArray);
+}
+{
+  const todoArrObj = [
+    {
+      id: 1,
+      title: "something",
+      isCompleted: false,
+    },
+    {
+      id: 2,
+      title: "something2",
+      isCompleted: true,
+    },
+    {
+      id: 3,
+      title: "something3",
+      isCompleted: false,
+    },
+  ];
+  /** splice array method remove any array element index wise  */
+  const isSplice = todoArrObj.splice(0, 2);
+  console.log(isSplice);
+}
+{
+  /**
+   * slice array method create a new array
+   */
+  const demoArr = [10, 20, 50, 45, 30, 40, 20, 10];
+  const sliceArr = demoArr.slice(1, 3);
+  console.log(sliceArr);
+
+  /**
+   * indexof an array method find the index of an array element
+   */
+  console.log(demoArr.indexOf(50));
+  /**
+   * lastIndexof an array method find the last index of an array element
+   */
+  console.log(demoArr.lastIndexOf(40));
+}
+{
+  const demoArr = [10, 20, 50, 45, 30, 40, 20, 10];
+  /**
+   * a list of array method
+   * 1. pop
+   * 2. push
+   * 3. shift
+   * 4. unshift
+   * 5. sort
+   * 6. join
+   * 7. concat
+   * 8. Array.isArray
+   */
+  // sort array can sort an array in ascending and descending order
+  const ascending = demoArr.sort((a, b) => {
+    return a - b;
+  });
+  console.log(ascending);
+  const descending = demoArr.sort((a, b) => {
+    return b - a;
+  });
+  console.log(descending);
+
+  // join array convert an array to a simple string
+  const stringarr = demoArr.join(" ");
+  console.log(stringarr);
 }
