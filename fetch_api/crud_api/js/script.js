@@ -1,4 +1,7 @@
 "use strict";
+/**
+ * json-server --watch db.json
+ */
 const API = `http://localhost:3000/todos`;
 
 const todoList = document.getElementById("todo_list");
@@ -10,6 +13,9 @@ const btnSubmit = document.getElementById("btnSubmit");
 const filterAll = document.getElementById("filterAll");
 const filterActive = document.getElementById("filterActive");
 const filterCompleted = document.getElementById("filterCompleted");
+
+let editableTodo = null;
+let editMode = false;
 
 let currentFilter = "all"; // all | activate | completed
 
@@ -78,13 +84,25 @@ function rendersTodos(todos) {
     editBtn.className =
       "bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-800 cursor-pointer";
     editBtn.addEventListener("click", async function () {
-      updateTodo(todo.id, todo.title);
+      editHandlerTodo(todo);
     });
     li.appendChild(leftDiv);
     li.appendChild(editBtn);
     li.appendChild(deleteBtn);
     todoList.appendChild(li);
   });
+}
+async function createHandler(event) {
+  event.preventDefault();
+  const title = todoInput.value.trim();
+  if (!title) return;
+  await fetch(API, {
+    method: "POST",
+    body: JSON.stringify({ title, isCompleted: false }),
+    headers: { "Content-type": "application/json" },
+  });
+  todoInput.value = "";
+  await loadTodos();
 }
 async function toggleIsCompleted(id, isCompleted) {
   await fetch(`${API}/${id}`, {
@@ -101,28 +119,40 @@ async function deleteTodo(id) {
 
   await loadTodos();
 }
-async function updateTodo(id, title) {
-  todoInput.value = title;
+async function editHandlerTodo(id) {
+  editableTodo = id;
+  todoInput.value = editableTodo.title;
   btnSubmit.innerText = "Update";
-  await fetch(`${API}/${id}`, {
-    method: "PUT",
-    body: JSON.stringify({ id, title }),
-  });
-  btnSubmit.innerText = "Add";
-  await loadTodos();
+  editMode = true;
+}
+async function updateHandlerTodo(event) {
+  event.preventDefault();
+  if (todoInput.value !== " ") {
+    const updateTodo = {
+      id: editableTodo.id,
+      isCompleted: editableTodo.isCompleted,
+      title: todoInput.value,
+    };
+    fetch(`${API}/${editableTodo.id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updateTodo),
+    });
+    await loadTodos();
+    todoInput.value = "";
+    editMode = false;
+    editableTodo = null;
+  } else {
+    alert("Please provide a valid tittle");
+  }
 }
 
 todoForm.addEventListener("submit", async function (event) {
-  event.preventDefault();
-  const title = todoInput.value.trim();
-  if (!title) return;
-  await fetch(API, {
-    method: "POST",
-    body: JSON.stringify({ title, isCompleted: false }),
-    headers: { "Content-type": "application/json" },
-  });
-  todoInput.value = "";
-  await loadTodos();
+  if (editMode) {
+    updateHandlerTodo(event);
+  } else {
+    createHandler(event);
+  }
 });
 
 filterAll.addEventListener("click", async function () {
