@@ -376,3 +376,59 @@
   const stringarr = demoArr.join(" ");
   console.log(stringarr);
 }
+{
+  let myCar = "Lamborghini Huracan Evo";
+
+  function changeCar() {
+    let myCar = "Ferrari SF90 Stradale";
+    console.log(myCar);
+  }
+
+  // let myCar = "Ford GT";
+  console.log(myCar);
+}
+{
+  let secondHome = "Canada";
+
+  function toggleHome() {
+    let secondHome = "Australia";
+    secondHome = "USA";
+  }
+
+  toggleHome();
+
+  console.log(secondHome);
+}
+{
+  /**
+   * hoisting
+   */
+  var hoistingIntro = "Hi there, I am a string one.";
+
+  function hoistingFunc() {
+    console.log(hoistingIntro);
+    var hoistingIntro = "Hi there, I am a string two";
+    console.log(hoistingIntro);
+  }
+
+  hoistingFunc();
+
+  /** hoisting example */
+  // function codeHoist() {
+  //   let a = 10;
+  //   let b = 50;
+  // }
+  // codeHoist();
+
+  // console.log("value of a is ", a);
+  // console.log("value of b is ", b);
+  // sayHi();
+  // console.log(sayHello);
+
+  // function sayHi() {
+  //   var sayHello = "Hi!";
+  //   console.log(sayHello);
+  // }
+
+  // var sayHello = "Hello!";
+}
